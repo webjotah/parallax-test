@@ -15,26 +15,13 @@ const ParallaxDataBg = [{
     },],
 }]
 
-const ParallaxDataText = [{
-  start: 0,
-  end: 500,
-  properties: [
-    {
-      startValue: 1,
-      endValue: 0,
-      property: 'opacity',
-    },],
-}]
-
 export default function Home() {
   return (
     <div className='h-[200vh] relative overflow-hidden'>
       <Plx parallaxData={ParallaxDataBg}>
         <Image src={Bg} alt='background' width={1920} />
       </Plx>
-      <Plx parallaxData={ParallaxDataText}>
         <h1 className='absolute top-96 left-[42%] z-10 text-5xl font-bold drop-shadow-md shadow-black'>Parallax</h1>
-      </Plx>
     </div>
   )
 }
